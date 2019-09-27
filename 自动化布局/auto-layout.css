@@ -1,0 +1,102 @@
+html,
+body,
+.auto-layout-container,
+.auto-layout-col,
+.auto-layout-row {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.auto-layout-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.auto-layout-row {
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: rgb(27, 185, 146);
+  min-height: 1px;
+  min-height: 100px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 9px #ccc;
+}
+.auto-layout-col {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: rgb(223, 192, 16);
+  border-radius: 5px;
+  min-height: 1px;
+  min-height: 50px;
+  float: left;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+
+h2,
+h3 {
+  background-color: rgb(11, 236, 161);
+}
+
+/* 移动端第一区块固定,如果不需要请注释以下内容 */
+.auto-layout-row.copy-first-row {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: #fff;
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 415px) {
+  .auto-layout-row.copy-first-row {
+    display: none;
+  }
+  .auto-layout-container {
+    width: 80%;
+  }
+}
+
+/* 移动端第一区块固定,如果不需要请注释以上内容 */
+
+/* 页面宽度超过1200就将宽度设为固定值 */
+@media (min-width: 1200px) {
+    .auto-layout-container{
+        width: 1200px;
+    }
+}
+
+/* 让页面支持打印 */
+@media print {
+  .auto-layout-container {
+    width: 210mm;
+  }
+  .auto-layout-row {
+    page-break-inside: avoid;
+  }
+}
+
+/* 设置你的自定义样式 */
+
+/* 设置容器样式 */
+.auto-layout-container {}
+
+/* 设置row样式 */
+.auto-layout-row {}
+
+/* 设置col样式 */
+.auto-layout-col {}
+
+
