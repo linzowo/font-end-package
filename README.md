@@ -12,7 +12,7 @@
 ---
 ## 组件目录
 
-  - [自动布局工具]()
+  - [自动布局工具](https://github.com/linzowo/font-end-package/tree/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B8%83%E5%B1%80)
 
 ---
 ## 测试
