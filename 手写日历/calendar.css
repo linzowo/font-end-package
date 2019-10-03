@@ -1,0 +1,139 @@
+/* 通用声明 */
+body,
+div {
+  box-sizing: border-box;
+}
+/* 清除浮动 */
+.clearfix:after,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* 容器设置 */
+.calendar-container {
+  width: 60%;
+  /* margin: 0 auto; */
+  background-color: #fff;
+  border-top: 4px solid #fac863;
+  padding: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+/* 容器设置 */
+
+/* calendar-header-toolbar头部工具区开始 */
+.calendar-header-toolbar {
+  margin: 0;
+  padding: 10px;
+  vertical-align: middle;
+  position: relative;
+}
+
+/* 日期展示区开始 */
+.calendar-center {
+  text-align: center;
+}
+.calendar-center .calendar-date-show {
+  line-height: 1.5;
+}
+.calendar-date-show {
+  margin: 0;
+  padding: 0;
+}
+
+/* 日期展示区结束 */
+
+/* button开始 */
+.calendar-left {
+  float: left;
+}
+.calendar-right {
+  float: right;
+}
+
+.calendar-header-toolbar .calendar-button-primary {
+  margin: 0;
+  background-color: #2c3e50;
+  border-color: #1a252f;
+  vertical-align: middle;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.4em 0.65em;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  float: left;
+}
+.calendar-header-toolbar .calendar-button-primary:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.calendar-header-toolbar .calendar-button-primary:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.calendar-header-toolbar button:hover {
+  border-color: #1a252f;
+  background-color: #1e2b37;
+  cursor: pointer;
+}
+/* button结束 */
+
+/* calendar-header-toolbar头部工具区结束 */
+
+/* 日历主体表格区开始 */
+.calendar-table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.calendar-table th {
+  border: 1px solid #ccc;
+}
+.calendar-table td {
+  border: 1px solid #ccc;
+  padding: 4% 2%;
+}
+/* 用户选择的日期高亮 */
+.calendar-table td.active{
+  background-color: rgb(190, 47, 47);
+  color: #fff;
+  font-weight: 800;
+}
+/* 日历主体表格区结束 */
+
+/* 弹出框开始 */
+
+.msg-box{
+  min-height: 120px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 9px #ccc;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 999;
+  left: 30%;
+  right: 30%;
+  top: 40%;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+.msg-box button{
+  width: 30%;
+  background-color: #409eff;
+  border-color: #409eff;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #ccc;
+  color: #fff;
+  padding:10px;
+}
+
+/* 弹出框结束 */

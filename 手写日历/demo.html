@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>日历</title>
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="./calendar.css" />
+    <style>
+      body {
+        padding: 20px;
+      }
+      .calendar-box {
+        /* width: 400px; */
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <div class="calendar-box"></div>
+    <script src="./calendar.js"></script>
+    <script>
+      let inputObj = document.querySelector("input"),
+      calendarObj = {};
+      inputObj.addEventListener("blur", function() {
+        if (!document.querySelector(".calendar-container")) {
+          calendarObj = new Calendar(inputObj.value, "", ".calendar-box");
+        } else {
+          calendarObj.setDate(inputObj.value);
+        }
+      });
+      inputObj.addEventListener("keydown", function(e) {
+        // console.dir(e);
+        if (e.keyCode === 13) {
+          showCalendar(e)
+        }
+      });
+
+      function showCalendar(e) {
+        if (!document.querySelector(".calendar-container")) {
+          calendarObj = new Calendar(inputObj.value, "", ".calendar-box");
+        } else {
+          calendarObj.setDate(inputObj.value);
+        }
+      }
+    </script>
+  </body>
+</html>
