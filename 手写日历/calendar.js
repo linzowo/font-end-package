@@ -1,6 +1,12 @@
 // 日历插件
 
 // 声明构造函数
+/**
+ * 
+ * @param {String} date 可选参数，日期字符串，格式为xxxx/xx/xx，默认为当前系统日期;
+ * @param {Boolean} enFlag 可选参数，是否开启英文模式，默认为false；
+ * @param {String} rootElement 可选参数，根元素的选择器，决定生成的日历最终渲染到那个页面元素中，默认为body；
+ */
 function Calendar(date, enFlag, rootElement) {
   this.date = new Date();
 
