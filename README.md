@@ -13,6 +13,7 @@
 ## 组件目录
 
   - [自动布局工具](https://github.com/linzowo/font-end-package/tree/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B8%83%E5%B1%80)
+  - [日历组件](https://github.com/linzowo/font-end-package/tree/master/%E6%89%8B%E5%86%99%E6%97%A5%E5%8E%86)
 
 ---
 ## 测试
