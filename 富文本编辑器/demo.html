@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>富文本编辑器demo</title>
+    <style>
+      body,
+      html,
+      div,
+      button {
+        padding: 0;
+        margin: 0;
+        boder-sizing: border-box;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 9px #ccc;
+      }
+      .btn-box {
+        padding-top: 20px;
+      }
+      button {
+        background-color: rgb(33, 123, 158);
+        border-color: rgb(33, 123, 158);
+        box-shadow: 0 0 3px rgb(33, 123, 158);
+        color: #fff;
+        padding: 5px;
+      }
+      .rich-text-box {
+        border: 1px solid rgb(11, 228, 58);
+        padding: 20px;
+        /* background-color: rgb(221, 143, 112); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn-box">
+        <button id="bold">粗体</button>
+        <button id="bgc">背景色</button>
+        <button id="fontSize">字体大小</button>
+        <button id="italic">斜体</button>
+        <button id="insertImage">插入图片</button>
+      </div>
+      <div class="rich-text-box" contenteditable="true">
+        你好啊,这是通过contenteditable实现的富文本
+      </div>
+    </div>
+
+    <script>
+      let container = document.querySelector(".rich-text-box"),
+        btnBox = document.querySelector(".btn-box");
+
+      btnBox.addEventListener("click", function(e) {
+        switch (e.target.id) {
+          case "bold":
+            document.execCommand("bold", true, null);
+            break;
+          case "bgc":
+            document.execCommand("backColor", true, "rgb(221, 143, 112)");
+            break;
+          case "fontSize":
+            document.execCommand("fontSize", true, 7);
+            break;
+          case "italic":
+            document.execCommand("italic", true, null);
+            break;
+          case "insertImage":
+            document.execCommand("insertImage", true, "./2019-08-16_090739.png");
+            break;
+
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
